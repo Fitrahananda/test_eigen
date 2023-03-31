@@ -1,0 +1,42 @@
+[
+  {
+    "code": "JK-45",
+    "title": "Harry Potter",
+    "author": "J.K Rowling",
+    "borrowDate": null,
+    "MemberId": null,
+    "stock": 1
+  },
+  {
+    "code": "SHR-1",
+    "title": "A Study in Scarlet",
+    "author": "Arthur Conan Doyle",
+    "borrowDate": null,
+    "MemberId": null,
+    "stock": 1
+  },
+  {
+    "code": "TW-11",
+    "title": "Twilight",
+    "author": "Stephenie Meyer",
+    "borrowDate": null,
+    "MemberId": null,
+    "stock": 1
+  },
+  {
+    "code": "HOB-83",
+    "title": "The Hobbit, or There and Back Again",
+    "author": "J.R.R. Tolkien",
+    "borrowDate": null,
+    "MemberId": null,
+    "stock": 1
+  },
+  {
+    "code": "NRN-7",
+    "title": "The Lion, the Witch and the Wardrobe",
+    "author": "C.S. Lewis",
+    "borrowDate": null,
+    "MemberId": null,
+    "stock": 1
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API TEST EIGEN",
+    "description": "berikut api test eigen",
+    "version": "1.0.0"
+  },
+  "server": [
+    {
+      "url": "http://localhost:3000",
+      "description": "localhost"
+    }
+  ],
+  "tags": [
+    {
+      "name": "API",
+      "description": "API"
+    }
+  ],
+  "paths": {
+    "/borrow": {
+      "post": {
+        "tags": ["API"],
+        "summary": "Members can borrow",
+        "consumes": "application/x-www-form-urlencoded",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "memberName": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "book succesfully borrow"
+          },
+          "400": {
+            "description": "validation error"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      }
+    },
+    "/return": {
+      "post": {
+        "tags": ["API"],
+        "summary": "return book",
+        "consumes": "application/x-www-form-urlencoded",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "memberName": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "book succesfully return"
+          },
+          "400": {
+            "description": "validation error"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      }
+    },
+    "/all/book": {
+      "get": {
+        "tags": ["API"],
+        "summary": "all book available",
+        "responses": {
+          "200": {
+            "description": "get all existing books and quantities"
+          },
+          "404": {
+            "description": "no book available"
+          }
+        }
+      }
+    },
+    "/all/member": {
+      "get": {
+        "tags": ["API"],
+        "summary": "all member",
+        "responses": {
+          "200": {
+            "description": "get all existing member and total borrow"
+          },
+          "404": {
+            "description": "no member available"
+          }
+        }
+      }
+    }
+  }
+}
